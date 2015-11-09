@@ -5,7 +5,7 @@ mapfile -t dbInstanceARR < <(aws rds describe-db-instances --output json | grep 
 
 if [ ${#dbInstanceARR[@]} -gt 0 ]
    then
-   echo "Deleting existing RDS database-instances"
+   # echo "Deleting existing RDS database-instances"
    LENGTH=${#dbInstanceARR[@]}
 
       for (( i=0; i<${LENGTH}; i++));
