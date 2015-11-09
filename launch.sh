@@ -35,7 +35,7 @@ for i in {0..20}; do echo -ne '.'; sleep 1;done
 
 
 echo -e "\n-create launch-configuration"
-aws autoscaling create-launch-configuration --launch-configuration-name itmo544-launch-config --image-id $1 --key-name $6 --security-groups $4 --instance-type $3 --user-data file://../itmo-544-env/install-webserver.sh --iam-instance-profile $7
+aws autoscaling create-launch-configuration --launch-configuration-name itmo544-launch-config --image-id $1 --key-name $6 --security-groups $4 --instance-type $3 --user-data file://../itmo544-env/install-webserver.sh --iam-instance-profile $7
 
 
 
