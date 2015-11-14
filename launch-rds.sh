@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/local/bin/bash
 
 
 mapfile -t dbInstanceARR < <(aws rds describe-db-instances --output json | grep "\"DBInstanceIdentifier" | sed "s/[\"\:\, ]//g" | sed "s/DBInstanceIdentifier//g" )
