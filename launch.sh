@@ -65,3 +65,10 @@ mapfile -t dbInstanceARR < <(aws rds describe-db-instances --output json | grep 
 #fi
 
 #php ./setup.php
+
+# cloudwatch test
+
+# aws cloudwatch put-metric-alarm --alarm-name LSL-alarm --alarm-description "Alarm LSL triggered" --metric-name LSL-mertic 
+# --namespace AWS/EC2 --statistic Average --dimensions Name=LSL-AUTO-SCALE,Value=LSL-AUTO-SCALE 
+# --period 300 --threshold 70 --comparison-operator GreaterThanThreshold 
+# --evaluation-periods 2 --alarm-actions arn:aws:sns:us-east-1:632259975581:mp2-lisiling --unit Percent
